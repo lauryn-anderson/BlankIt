@@ -46,6 +46,6 @@ struct EditableTextView: UIViewRepresentable {
 
 struct EditableTextView_Previews: PreviewProvider {
     static var previews: some View {
-        EditableTextView(text: InputView().$text)
+        EditableTextView(text: InputView().$data.text)
     }
 }

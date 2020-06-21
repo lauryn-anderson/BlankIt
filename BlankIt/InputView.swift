@@ -9,15 +9,28 @@
 import SwiftUI
 
 struct InputView: View {
-    @State var text = ""
+    @State var data = Data()
     
     var body: some View {
-        EditableTextView(text: $text)
+        NavigationView {
+            VStack {
+                EditableTextView(text: $data.text)
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: OutputView(text: $data.text)) {
+                        Image(systemName: "arrow.right.circle.fill")
+                            .font(.system(size: 50))
+                            .foregroundColor(Color.purple)
+                    }
+                }
+            .padding()
+            }
+        }
     }
 }
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputView(text: "")
+        InputView()
     }
 }
