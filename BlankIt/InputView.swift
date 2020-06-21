@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct InputView: View {
+    @State var text = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        EditableTextView(text: $text)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        InputView(text: "")
     }
 }
