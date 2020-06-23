@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Data {
-    var text: String = ""
+class Data: ObservableObject {
+    @Published var text: String = ""
 }

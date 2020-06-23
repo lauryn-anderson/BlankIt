@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct InputView: View {
-    @State var data = Data()
+    @ObservedObject var data = Data()
     
     var body: some View {
         NavigationView {
@@ -25,6 +25,7 @@ struct InputView: View {
                 }
             .padding()
             }
+            .navigationBarTitle("Your Paragraph")
         }
     }
 }
